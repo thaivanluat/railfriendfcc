@@ -1,0 +1,19 @@
+<div class="container-fluid py-5">
+  <h1 class="display-5 fw-bold"><%= @friend.first_name + " " + @friend.last_name %></h1>
+  <p class="col-md-8 fs-4">
+    <%= @friend.email %> <br/>
+    <%= @friend.phone %> <br/>
+    <%= @friend.twitter %> <br/>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div style="display: flex;">
+        <%= link_to "Edit", edit_friend_path(@friend), class: "btn btn-primary" %>
+        <%= link_to "Back", friends_path, class: "btn btn-secondary mx-2" %>
+        <%= button_to "Destroy", @friend, method: :delete, class: "btn btn-danger" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+</div>
