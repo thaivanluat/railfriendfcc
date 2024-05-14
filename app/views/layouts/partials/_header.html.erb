@@ -17,11 +17,10 @@
             <%= link_to "Friend List", friends_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Sign Out", destroy_user_session_path, method: :delete,
-           class: "nav-link" %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
+            <%= link_to current_user.email, edit_user_registration_path, class: "nav-link" %>
           </li>
         <% else %>
           <li class="nav-item">
@@ -35,6 +34,7 @@
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
+        <span>User</span>
       </form>
     </div>
   </div>
